@@ -1,8 +1,8 @@
 public class CreditPaymentService {
-    public double calculate(double Sum, double Percent, double CreditTerm) {
-        double InterestPerMonth = (Percent / 12) / 100; // кредитная ставка в месяц
-        double koef = (InterestPerMonth * (Math.pow(1 + InterestPerMonth, CreditTerm * 12))) / (Math.pow(1 + InterestPerMonth, CreditTerm * 12) - 1); // коэффициент аннуитета
-        double result = Sum * koef; // итог
+    public double calculate(double sum, double percent, double creditterm) {
+        double interestpermonth = (percent / 12) / 100; // кредитная ставка в месяц
+        double koef = (interestpermonth * (Math.pow(1 + interestpermonth, creditterm * 12))) / (Math.pow(1 + interestpermonth, creditterm * 12) - 1); // коэффициент аннуитета
+        double result = sum * koef; // итог
         int pay = (int) result;
         return pay;
     }
